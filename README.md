@@ -11,6 +11,9 @@ This file is included in this repository.
 
 The development board comes with a USB to barrel jack power connector. When connected, this cable can provide power to the board. As an alternative, the micro-USB connector is also able to provide power when jumper J5 is placed.
 While the JLINK ‘standard’ interface is defined as capable to provide power to connected devices, the power(voltage) line on this development board is left floating (not connected). When connecting ping 19 of the JTAG interface to jumper 5, a J-Link programmer can be used to power and program the development board without the need for additional (USB)power cables.
+
+<img src="https://github.com/sambuls/STM32F407VET6_DevBoard/assets/10206545/979fc7d8-5c55-4197-83fb-cddc7ce6b8dc" width="200">
+
 By default, the J-Link programmer does not provide any power to the board. To enable this feature, one can start a GDB server session with the -powertarget option.
 For example:
 
@@ -18,7 +21,8 @@ For example:
 C:\ST\STM32CubeIDE_1.13.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.jlink.win32_2.2.0.202305091550\tools\bin\JLinkGDBServerCL.exe -powertarget 10 -port 2331 -s -device STM32F407VE -endian little -speed 4000 -if swd -vd
 ```
 
-Note that the argument of the -powertarget option is the time the GDB server session will wait for the voltage level to become stable.
+Note that the argument of the -powertarget option is the time the GDB server session will wait for the voltage level to become stabel.
+
 
 
 ## From Fake to Real
