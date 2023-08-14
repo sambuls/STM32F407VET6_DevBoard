@@ -23,9 +23,13 @@ C:\ST\STM32CubeIDE_1.13.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 
 Note that the argument of the -powertarget option is the time the GDB server session will wait for the voltage level to become stabel.
 
-
-
 ## From Fake to Real
+
+The development board is advertised as 'Industrial Control STM32F407VET6 Development Board RS485 Dual CAN Ethernet Networking STM32' which suggestively indicates that the controller is of the type STM32F407VET6 from the respected company ST.
+Unfortunately, first initial test with a Segger JLink debugger/programmer showed that the chip did not respond with official ST device ID’s.
+After reading several AliExpress/Alibaba product reviews and additional sanity checks I concluded that this specific development board/chip is very likely to be a counterfeit product.
+Since the chip does not respond with official ID’s, the tools of ST will abort any attempt to program this chip. To fix this issue, the counterfeit chip is replaced with an official STM32F407VET6 chip from ST.
+After removing the counterfeit chip and soldering the genuine one, the ST tools worked as expected and a first ‘hello world’ (blinky) program was successfully downloaded and executed.
 
 <img src="https://github.com/sambuls/STM32F407VET6_DevBoard/assets/10206545/e59d9ec1-b42c-4076-9878-3a10bcc6a687" width="200">
 <img src="https://github.com/sambuls/STM32F407VET6_DevBoard/assets/10206545/a0976636-ae28-4b34-bd82-ff91e7c9f746" width="200">
