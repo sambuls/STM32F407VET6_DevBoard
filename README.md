@@ -21,11 +21,13 @@ By default, the J-Link programmer does not provide any power to the board. To en
 For example:
 
 ```
-C:\ST\STM32CubeIDE_1.13.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.jlink.win32_2.2.0.202305091550\tools\bin\JLinkGDBServerCL.exe -powertarget 10 -port 2331 -s -device STM32F407VE -endian little -speed 4000 -if swd -vd -nos
+C:\ST\STM32CubeIDE_1.13.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.jlink.win32_2.2.0.202305091550\tools\bin\JLinkGDBServerCL.exe -powertarget 10 -port 2331 -s -device STM32F407VE -endian little -speed 4000 -if swd -vd
 ```
 
 Note that the argument of the -powertarget option is the time the GDB server session will wait for the voltage level to become stabel.
-Note that the option -nos keeps the GDB server active after a session is finished. Keeping the GDB server open allows you to continiously start debug sesseions launched from the CubeIDE.
+After this command, the JLink will remain the voltage level after a GDB server shutdown. Keeping the voltage level enables the CubeIDE debugger 
+to create a new GDB server session. 
+
 
 ## From Fake to Real
 
