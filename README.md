@@ -1,6 +1,9 @@
 # STM32F407VET6_DevBoard
 A STM32F407VET6 Industrial Development Board from Alibaba
 
+<img src="https://github.com/sambuls/STM32F407VET6_DevBoard/assets/10206545/51135204-c445-4b2e-9b0e-9131603c9c60" width="200">
+
+
 
 ## Schematics
 On some of the AliExpress/Alibaba seller pages, the product description of the board shows a very low resolution, unusable schematic.
